@@ -1,10 +1,13 @@
+<% @events.each do |event| %>
+<hr>
 <div class="event">
-  <div class="date_text" style="display:none"><%= @date.to_s%></div>
+  <div class="date_text"><%= event.datetime%></div>
   <p>
-    <%= @name %>は<%= @date.strftime("%Y-%m-%d")%>にあります
+    <%= event.name %>は<%= event.date_str%>にあります
   </p>
   <div class="Timer">
-    <p><span class="name"><%= @name %></span>まで</p>
-    <div id="TimeLeft"></div>
+    <p><span class="name"><%= event.name %></span>まで</p>
+    <div class="TimeLeft"></div>
   </div>
 </div>
+<% end %>
