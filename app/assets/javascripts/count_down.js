@@ -3,7 +3,7 @@ $(function() {
 });
 function countDown() {
   var startDateTime = new Date();
-  var endDateTime = new Date("April 01,2020 00:00:00");
+  var endDateTime = new Date($('.date_text').text());
   var left = endDateTime - startDateTime;
   var a_day = 24 * 60 * 60 * 1000;
 

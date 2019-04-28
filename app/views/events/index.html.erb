@@ -1,5 +1,10 @@
-<p><%= @name %>は<%= @date.strftime("%Y-%m-%d")%>にあります</p>
-<div class="Timer">
-<p>カウントダウン終了まで</p>
-<div id="TimeLeft"></div>
+<div class="event">
+  <div class="date_text" style="display:none"><%= @date.to_s%></div>
+  <p>
+    <%= @name %>は<%= @date.strftime("%Y-%m-%d")%>にあります
+  </p>
+  <div class="Timer">
+    <p><span class="name"><%= @name %></span>まで</p>
+    <div id="TimeLeft"></div>
+  </div>
 </div>
